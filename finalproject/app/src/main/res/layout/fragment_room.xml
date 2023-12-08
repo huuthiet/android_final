@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/img_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rooms"
+            android:layout_weight="7"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/img_default_avatar_user"
+            android:layout_weight="3"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="77dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            app:cardCornerRadius="20dp">
+<!--            Đã có shape: drawable/carview_border nhưng chưa apply được-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FA0000">
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_energy"
+                        app:maxImageSize="40dp"
+                        android:backgroundTint="@color/bg_floatingbutton"/>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/text_energy_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30.33 kWh"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Power usage today"
+                        android:gravity="center_horizontal"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:tabMode="scrollable"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager_2_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

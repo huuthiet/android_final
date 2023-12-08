@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="bottom_home">Home</string>
+    <string name="bottom_rooms">Rooms</string>
+    <string name="bottom_space_add">Add</string>
+    <string name="bottom_notifications">Notifications</string>
+    <string name="bottom_profile">Profile</string>
+</resources>
